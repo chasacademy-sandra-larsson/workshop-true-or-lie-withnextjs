@@ -99,7 +99,16 @@ API:et tar emot en POST-request med `{ topic: "animals" }` och returnerar `{ sta
 2. Skapa knappar eller kort där spelaren kan välja ämne (t.ex. djur, rymden, historia, mat)
 3. När ett ämne väljs — navigera till `/game/[topic]` (t.ex. `/game/animals`)
 
-**Tips:** Använd `useRouter` från `next/navigation` för att navigera. Kom ihåg att komponenter med interaktivitet (onClick, useState) behöver `"use client"` högst upp i filen.
+**Tips:** Använd `useRouter` från `next/navigation` för att navigera programmatiskt:
+
+```typescript
+import { useRouter } from "next/navigation";
+
+const router = useRouter();
+router.push("/game/animals");
+```
+
+Kom ihåg att komponenter med interaktivitet (onClick, useState) behöver `"use client"` högst upp i filen.
 
 ---
 
@@ -110,6 +119,7 @@ API:et tar emot en POST-request med `{ topic: "animals" }` och returnerar `{ sta
 3. Skapa två knappar: "Fakta" och "Påhitt" — jämför spelarens svar med `isTrue`
 4. Visa feedback (rätt/fel) efter varje svar
 5. Lägg till en "Nästa fråga"-knapp som hämtar ett nytt påstående
+
 
 **Filer att skapa:** `src/app/game/[topic]/page.tsx`
 
