@@ -122,8 +122,8 @@ const res = await fetch("/api/generate", {
   body: JSON.stringify({ topic: "animals" }),
 });
 const data = await res.json();
-// data.statement = "Delfiner sover med ett öga öppet"
-// data.isTrue = true
+// data.statement = "Sandra Bullock är 50 år"
+// data.isTrue = false
 ```
 
 ---
